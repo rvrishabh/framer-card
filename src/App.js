@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Card, styled, Typography } from "@mui/material";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValue,
+  useTransform,
+} from "framer-motion";
+import { StlViewer } from "react-stl-viewer";
+import Parallel from "./components/Parallel";
+import Svg from "./components/Svg";
+import TextColor from "./components/TextColor";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AnimatePresence exitBeforeEnter>
+        {/* <Svg /> */}
+        {/* <TextColor /> */}
+        <Parallel />
+      </AnimatePresence>
+    </>
   );
 }
 
